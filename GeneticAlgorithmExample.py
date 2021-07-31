@@ -16,13 +16,11 @@ class Agent( object ):
 
 
 	def __repr__( self ) -> str:
-		string = ''.join( item for item in self.STRUCTURE )
-		return f'{string} | FIT: {self.FITNESS}'
+		return f'{self.STRUCTURE} | FIT: {self.FITNESS}'
 
 
 	def __str__( self ) -> str:
-		string = ''.join( item for item in self.STRUCTURE )
-		return f'{string} | FIT: {self.FITNESS}'
+		return f'{self.STRUCTURE} | FIT: {self.FITNESS}'
 
 
 	def __iter__( self ):
