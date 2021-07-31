@@ -146,12 +146,13 @@ class GeneticAlgorithm( object ):
 
 if __name__ == '__main__':
 	GA = GeneticAlgorithm( populationSize=100, groupingSizePCT=0.15, mutationRatePCT=.12, coincidencePCT=0.02 )
+	print( f'\tGEN: {GA.COUNT :0>3d} -> {None} -> AVG: {0:.2f}' )
 
 	safetyNet = 500
 	while( GA.TOP_AGENT.STRUCTURE != GA.TARGET ) and ( GA.COUNT < safetyNet ):
 		GA.procreate( )
 
-		if GA.progressReport( GA.COUNT, safetyNet, 20 ):
+		if GA.progressReport( GA.COUNT, safetyNet, 10 ):
 			print( f'\tGEN: {GA.COUNT :0>3d} -> {GA.TOP_AGENT} -> AVG: {GA.getGenerationAverage( GA.GENERATION ) :.2f}' )
 
 
