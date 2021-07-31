@@ -48,7 +48,7 @@ class GeneticAlgorithm( object ):
 
 	TARGET :str = '<~Genetic A!gorithm:S@mple~>'
 
-	# Characters are picked from Ascii table[ 32 : 126 ]
+	# Characters are sampled from Ascii table[ MIN : MAX ]
 	MIN_BASE_VALUE :int = 32
 	MAX_BASE_VALUE :int = 126
 
