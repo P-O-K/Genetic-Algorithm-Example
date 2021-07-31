@@ -46,7 +46,7 @@ class GeneticAlgorithm( object ):
 	"""docstring for GeneticAlgorithm"""
 
 
-	TARGET :str = 'Genetic <&%@?|/> Algorithm'
+	TARGET :str = '<~Genetic A!gorithm:S@mple~>'
 
 	MIN_BASE_VALUE :int = 32
 	MAX_BASE_VALUE :int = 126
@@ -157,5 +157,5 @@ if __name__ == '__main__':
 
 
 	print( '\nSimulation Complete:' )
-	print( f'Generations: {GA.COUNT}' )
+	print( f'Total Generations: {GA.COUNT}' )
 	print( f'Best Agent: {GA.TOP_AGENT}' )
