@@ -10,6 +10,7 @@ class Agent( object ):
 
 
 	getChrString = lambda self: ''.join( chr( i ) if i>31 and i<127 else '█' for i in self.STRUCTURE )
+								 	    # ↑ ALT code 219
 
 
 	def __init__( self, structure:list, fitness:int ) -> None:
@@ -54,8 +55,8 @@ class GeneticAlgorithm( object ):
 	GENERATION = list( )
 	TOP_AGENT = Agent( list( ), 0 )
 
-	MIN_BASE_VALUE :int = 32
-	MAX_BASE_VALUE :int = 126
+	MIN_BASE_VALUE :int = 0
+	MAX_BASE_VALUE :int = 255
 	MAX_ALTR_VALUE :int = 5
 
 	GEN_COUNT :int = 1
@@ -167,4 +168,4 @@ if __name__ == '__main__':
 
 	print( '\nSimulation Complete:' )
 	print( f'\tTotal Generations: {GA.GEN_COUNT}' )
-	print( f'\tBest Agent: {GA.TOP_AGENT.getChrString( )}, \n\t\t{GA.TOP_AGENT}' )
+	print( f'\tTop Agent: {GA.TOP_AGENT.getChrString( )}, \n\t\t{GA.TOP_AGENT}' )
